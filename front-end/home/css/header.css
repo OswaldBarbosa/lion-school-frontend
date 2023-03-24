@@ -1,0 +1,13 @@
+.logo-lion-scholl {
+    padding-top: 1vh;
+    padding-left: 6vw;
+}
+
+.sair {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding-right: 10vw;
+    font-size: 5vh;
+    color: var(--primary-icon);
+}
