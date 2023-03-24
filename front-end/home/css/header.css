@@ -3,11 +3,16 @@
     padding-left: 6vw;
 }
 
+.text-sair {
+    padding-left: 1vh;
+    font-size: 3vh;
+}
+
 .sair {
     display: flex;
     justify-content: end;
     align-items: center;
     padding-right: 10vw;
-    font-size: 5vh;
+    font-size: 4vh;
     color: var(--primary-icon);
 }
