@@ -9,9 +9,32 @@ body {
 
 header {
     display: grid;
-    grid-template-columns: 
-    50% 50%;
     width: 100%;
     height: 10vh;
     background: var(--primary-color);
+    grid-template-areas: 
+    logo sair;
+    grid-template-columns: 
+    50% 50%;
+}
+
+main {
+    display: grid;
+    align-items: center;
+    width: 100%;
+    height: 75vh;
+    grid-template-areas: 
+    "devices studant container-cursos";
+    grid-template-columns: 
+    40vw 20vw 40vw;
+}
+
+footer {
+    display: grid;
+    width: 100%;
+    height: 15vh;
+    background: var(--primary-color);
+    grid-template-areas: 
+    "informacoes-contatos copyrigyh redes-sociais";
+    grid-template-columns: 40vw 20vw 40vw;
 }

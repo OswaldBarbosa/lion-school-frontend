@@ -1,0 +1,28 @@
+.informacoes-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 10vw;
+    gap: 2vh;
+    grid-area: informacoes-contatos;
+}
+
+.informacoes {
+    display: flex;
+    gap: 2vh;
+}
+
+li {
+    list-style: none;
+}
+
+.informacoes i{
+    font-size: 2vh;
+    color: var(--primary-icon);
+}
+
+.informacoes p {
+    font-size: 2vh;
+    color: #ffffff;
+}
+

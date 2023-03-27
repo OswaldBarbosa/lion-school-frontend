@@ -6,12 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter&family=Roboto:wght@400;500;700&display=swap"
-        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/53801ac64e.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/footer.css">
     <title>Lion Scholl</title>
 </head>
 
@@ -24,13 +27,72 @@
         </div>
 
         <div class="sair">
-            <i class="fas fa-sign-out"></i>
-            <p class="text-sair">Sair</p>
+
+            <div class="icon-sair">
+                <i class="fas fa-sign-out"></i>
+            </div>
+            <p class="text-sair" onclick="javascript:window.open('', '_self', '').close()">Sair</p>
+
+        </div>
+
+    </header>
+
+    <main>
+
+        <div>
+            <p class="text-escolha">Escolha um <span class="text-curso">curso</span></p>
+            <p class="text-gerenciar">para gerenciar</p>
+
+            <div class="devices">
+                <img src="./img/devices.png" alt="Dispositivos">
+            </div>
         </div>
 
 
+        <div class="studant">
+            <img src="./img/studant.png" alt="Estudante">
+        </div>
 
-    </header>
+        <div class="container-cursos">
+
+            <div class="icon-curso">
+                <i class="fas fa-code"></i>
+            </div>
+
+            <p class="nome-curso">DS</p>
+
+        </div>
+
+    </main>
+
+    <footer>
+
+        <ul class="informacoes-container">
+
+            <li>
+                <div class="informacoes">
+                    <i class="fas fa-phone-alt"></i>
+                    <p>(11) 4774 - 4700</p>
+                </div>
+            </li>
+
+            <li>
+                <div class="informacoes">
+                    <i class="fas fa-envelope"></i>
+                    <p>lionschool@gmail.com</p>
+                </div>
+            </li>
+
+            <li>
+                <div class="informacoes">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <p>Rua tcc, 211, Centro, Jandira</p>
+                </div>
+            </li>
+
+        </ul>
+
+    </footer>
 
 </body>
 

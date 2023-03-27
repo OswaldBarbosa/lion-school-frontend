@@ -1,0 +1,66 @@
+.devices {
+    display: flex;
+    justify-content: center;
+    grid-area: devices;
+}
+
+.text-escolha {
+    padding-left: 9vw;
+    font-size: 8vh;
+    font-weight: 300;
+    grid-area: devices;
+}
+
+.text-curso {
+    font-weight: 500;
+    color: var(--primary-color);
+}
+
+.text-gerenciar {
+    padding-left: 9vw;
+    padding-bottom: 10vh;
+    font-size: 8vh;
+    font-weight: 300;
+    grid-area: devices;
+}
+
+.studant {
+    display: grid;
+    justify-content: center;
+    grid-area: studant;
+}
+
+.container-cursos {
+    display: grid;
+    justify-self: center;
+    width: 15vw;
+    height: 20vh;
+    background: var(--primary-color);
+    box-shadow: 10px 10px #99A3D7;
+    transition: .5s;
+    grid-template-columns: 
+    50% 50%;
+    cursor: pointer;
+    grid-area: container-cursos;
+}
+
+.container-cursos:hover {
+    width: 20vw;
+    height: 25vh;
+
+}
+
+.icon-curso {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    font-size: 8vh;
+    color: #ffffff;
+}
+
+.nome-curso {
+    display: grid;
+    align-content: center;
+    font-size: 8vh;
+    color: #ffffff;
+}
