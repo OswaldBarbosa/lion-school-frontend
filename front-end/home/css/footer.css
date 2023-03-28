@@ -26,3 +26,29 @@ li {
     color: #ffffff;
 }
 
+.copyrigth {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2vh;
+    color: #ffffff;
+    grid-area: copyrigyh;
+}
+
+.redes-sociais {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+    grid-area: redes-sociais;
+}
+
+.icons-redes-sociais {
+    font-size: 3vh;
+    padding: 15px;
+    border: 3px solid #fff;
+    border-radius: 100% ;
+    color: var(--primary-icon);
+    transition: .5s;
+    cursor: pointer;
+}

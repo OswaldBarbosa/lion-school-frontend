@@ -36,5 +36,5 @@ footer {
     background: var(--primary-color);
     grid-template-areas: 
     "informacoes-contatos copyrigyh redes-sociais";
-    grid-template-columns: 40vw 20vw 40vw;
+    grid-template-columns: 30vw 40vw 30vw;
 }
