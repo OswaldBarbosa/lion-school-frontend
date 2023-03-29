@@ -5,7 +5,7 @@
 }
 
 .text-escolha {
-    padding-left: 9vw;
+    padding-left: 8vw;
     font-size: 8vh;
     font-weight: 300;
     grid-area: devices;
@@ -17,7 +17,7 @@
 }
 
 .text-gerenciar {
-    padding-left: 9vw;
+    padding-left: 8vw;
     padding-bottom: 10vh;
     font-size: 8vh;
     font-weight: 300;
@@ -30,11 +30,18 @@
     grid-area: studant;
 }
 
-.container-cursos {
-    display: grid;
+.container {
+    display: flex;
     justify-self: center;
-    width: 15vw;
+    flex-direction: column;
+}
+
+.container-cursos {
+    display: flex;
+    justify-content: center;
+    width: 20vw;
     height: 20vh;
+    margin: 16px;
     background: var(--primary-color);
     box-shadow: 10px 10px #99A3D7;
     transition: .5s;
@@ -45,20 +52,20 @@
 }
 
 .container-cursos:hover {
-    width: 20vw;
-    height: 25vh;
-
+    width: 22vw;
+    height: 22vh;
 }
 
-.icon-curso {
-    display: grid;
-    justify-content: center;
-    align-content: center;
-    font-size: 8vh;
+.image-curso {
+    width: 5vw;
+    height: 8vh;
+    display: flex;
+    align-self: center;
+    margin-right: 1vw;
     color: #ffffff;
 }
 
-.nome-curso {
+.sigla-curso {
     display: grid;
     align-content: center;
     font-size: 8vh;

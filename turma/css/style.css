@@ -1,0 +1,17 @@
+:root {
+    --primary-color: #3347B0;
+    --primary-icon: #ffffff
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+    width: 100%;
+    height: 10vh;
+    background: var(--primary-color);
+    display: grid;
+    grid-template-columns: 
+    50% 50%;
+}

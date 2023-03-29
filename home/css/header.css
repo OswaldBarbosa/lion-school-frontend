@@ -3,7 +3,7 @@
     padding-left: 6vw;
 }
 
-.sair {
+.container-sair {
     display: flex;
     justify-content: end;
     align-items: center;

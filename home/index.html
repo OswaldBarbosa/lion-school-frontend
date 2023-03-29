@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/53801ac64e.js" crossorigin="anonymous"></script>
+    <script src="./js/index.js" defer type="module"></script>
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/header.css">
@@ -26,12 +27,12 @@
             <img src="./img/logo.png" alt="Logo Lion Scholl">
         </div>
 
-        <div class="sair">
+        <div class="container-sair">
 
             <div class="icon-sair">
                 <i class="fas fa-sign-out"></i>
             </div>
-            <p class="text-sair" onclick="javascript:window.open('', '_self', '').close()">Sair</p>
+            <p class="text-sair" id="sair">Sair</p>
 
         </div>
 
@@ -53,14 +54,16 @@
             <img src="./img/studant.png" alt="Estudante">
         </div>
 
-        <div class="container-cursos">
+        <div class="container" id="container">
+            <!-- <div class="container-cursos" >
 
-            <div class="icon-curso">
-                <i class="fas fa-code"></i>
-            </div>
-
-            <p class="nome-curso">DS</p>
-
+                <div class="icon-curso">
+                    <i class="fas fa-code"></i>
+                </div>
+    
+                <p class="nome-curso">DS</p>
+    
+            </div> -->
         </div>
 
     </main>
@@ -92,28 +95,28 @@
 
         </ul>
 
-        <p class="copyrigth">Copyright © 2022 | Fernando Leonid</p>
+        <p class="copyrigth">Copyright © 2023 | Oswaldo Barbosa</p>
 
-        <ul class="redes-sociais">
+        <ul class="container-redes-sociais">
 
             <li>
                 <div class="icons-redes-sociais">
-                    <i class="fab fa-youtube"></i>
+                    <i class="fab fa-youtube fa-lg"></i>
                 </div>
             </li>
             <li>
                 <div class="icons-redes-sociais">
-                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-twitter fa-lg"></i>
                 </div>
             </li>
             <li>
                 <div class="icons-redes-sociais">
-                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-instagram fa-lg"></i>
                 </div>
             </li>
             <li>
                 <div class="icons-redes-sociais">
-                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-facebook-f fa-lg"></i>
                 </div>
             </li>
 

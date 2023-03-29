@@ -8,12 +8,10 @@ body {
 }
 
 header {
-    display: grid;
     width: 100%;
     height: 10vh;
     background: var(--primary-color);
-    grid-template-areas: 
-    logo sair;
+    display: grid;
     grid-template-columns: 
     50% 50%;
 }
