@@ -2,3 +2,22 @@
     padding-top: 1vh;
     padding-left: 6vw;
 }
+
+.container-voltar {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding-right: 10vw;
+}
+
+.icon-voltar {
+    font-size: 4vh;
+    color: #ffffff;
+}
+
+.text-voltar {
+    padding-left: 1vh;
+    font-size: 3vh;
+    color: #ffffff;
+    cursor: pointer;
+}

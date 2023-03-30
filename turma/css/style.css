@@ -1,6 +1,7 @@
 :root {
     --primary-color: #3347B0;
-    --primary-icon: #ffffff
+    --primary-icon: #ffffff;
+    --second-color: #E5B657;
 }
 
 body {
@@ -8,10 +9,33 @@ body {
 }
 
 header {
-    width: 100%;
     height: 10vh;
     background: var(--primary-color);
     display: grid;
     grid-template-columns: 
     50% 50%;
+}
+
+nav {
+    width: 100%;
+    height: 5vh;
+    background: #BCC2E5;
+    display: grid;
+    grid-template-columns: 
+    50% 50%;
+}
+
+main {
+    height: auto;
+    padding-bottom: 10vh;
+}
+
+footer {
+    width: 100%;
+    height: 15vh;
+    display: grid;
+    background: var(--primary-color);
+    grid-template-areas: 
+    "informacoes-contatos copyrigyh redes-sociais";
+    grid-template-columns: 30vw 40vw 20vw;
 }

@@ -1,0 +1,28 @@
+.status {
+    padding-top: 1.5vh;
+    padding-left: 6vw;
+    font-size: 2vh;
+    color: var(--primary-color);
+}
+
+.legenda {
+    display: flex;
+    justify-content: end;
+    padding-top: 1.5vh;
+    padding-right: 10vw;
+    gap: 28px;
+    font-size: 2vh;
+    color: var(--primary-color);
+}
+
+.caixa-finalizado {
+    width: 1vw;
+    height: 2vh;
+    background: var(--second-color);
+}
+
+.caixa-cursando {
+    width: 1vw;
+    height: 2vh;
+    background: var(--primary-color);
+}
