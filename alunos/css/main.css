@@ -1,0 +1,38 @@
+.container-card-aluno {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-aluno {
+    width: 28vw;
+    height: 55vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 16px;
+    box-shadow: 0 0 .3em #b4b4b4, 0 0 .3em #b4b4b4;
+}
+
+.nome-aluno {
+    font-size: 2vh;
+    color: var(--primary-color);
+}
+
+.container-card-materias {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-materias {
+    width: 28vw;
+    height: 55vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 16px;
+    box-shadow: 0 0 .3em #b4b4b4, 0 0 .3em #b4b4b4;
+}

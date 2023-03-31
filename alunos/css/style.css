@@ -1,6 +1,7 @@
 :root {
     --primary-color: #3347B0;
-    --primary-icon: #ffffff
+    --primary-icon: #ffffff;
+    --second-color: #E5B657;
 }
 
 body {
@@ -9,27 +10,25 @@ body {
 
 header {
     height: 10vh;
+    background: var(--primary-color);
     display: grid;
     grid-template-columns: 
     50% 50%;
-    background: var(--primary-color);
 }
 
 main {
     height: 75vh;
     display: grid;
-    align-items: center;
-    grid-template-areas: 
-    "devices studant container-cursos";
     grid-template-columns: 
-    40vw 20vw 40vw;
+    50% 50%;
 }
 
 footer {
+    width: 100%;
     height: 15vh;
     display: grid;
+    background: var(--primary-color);
     grid-template-areas: 
     "informacoes-contatos copyrigyh redes-sociais";
-    grid-template-columns: 30vw 40vw 30vw;
-    background: var(--primary-color);
+    grid-template-columns: 30vw 40vw 20vw;
 }

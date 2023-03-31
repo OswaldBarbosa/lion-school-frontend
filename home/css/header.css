@@ -7,7 +7,7 @@
     display: flex;
     justify-content: end;
     align-items: center;
-    padding-right: 10vw;
+    padding-right: 11.5vw;
 }
 
 .icon-sair {
@@ -21,4 +21,3 @@
     color: #ffffff;
     cursor: pointer;
 }
-
