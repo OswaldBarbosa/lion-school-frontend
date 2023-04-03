@@ -2,7 +2,37 @@
     padding-top: 1.5vh;
     padding-left: 6vw;
     font-size: 2vh;
+}
+
+.title-staus {
     color: var(--primary-color);
+}
+
+.container-status {
+    width: 10vw;
+    height: 12vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 1vw;
+    background: var(--primary-color);
+    color: #ffffff;
+}
+
+.finalizado {
+    width: 9vw;
+    border-top: 1px solid #ffffff;
+    border-bottom: 1px solid #ffffff;
+}
+
+.cursando {
+    width: 9vw;
+    border-bottom: 1px solid #ffffff;
+    transition: 10s;
+}
+
+.cursando:hover {
+
 }
 
 .legenda {

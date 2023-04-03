@@ -18,21 +18,14 @@ const criarCardCursos = (cursos) => {
 
     card.append(iconCurso, siglaCurso)
 
+    card.addEventListener('click', () => {
+        localStorage.setItem('nomeCurso', cursos.nome)
+        localStorage.setItem('curso', cursos.sigla)
+        window.location.href = `../turma/index.html`
+    })
+
     return card
-}
 
-const alunosDs = () => {
-    const novaJanela = document.getElementById('container')
-    novaJanela.onclick = function () {
-        window.location.href = "../turma/index.html"
-    }
-}
-
-const sair = () => {
-    const botaoSair = document.getElementById('sair')
-    botaoSair.onclick = function () {
-        window.close
-    }
 }
 
 const carregarCursos = () => {
@@ -42,8 +35,13 @@ const carregarCursos = () => {
     container.replaceChildren(...cards)
 }
 
-alunosDs()
-
-sair()
+const sair = () => {
+    const botaoSair = document.getElementById('sair')
+    botaoSair.onclick = function () {
+        window.close
+    }
+}
 
 carregarCursos()
+
+sair()
