@@ -1,7 +1,7 @@
 .nome-curso {
     display: flex;
     justify-content: center;
-    padding-top: 5vh;
+    padding-top: 15vh;
     font-size: 6vh;
     font-weight: 500;
     color: var(--primary-color);
@@ -11,7 +11,7 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    padding-top: 5vh;
+    padding-top: 10vh;
     gap: 70px;
 }
 
@@ -29,8 +29,9 @@
 }
 
 .nome-aluno {
-    width: 12vw;
+    width: 14vw;
     display: flex;
+    justify-content: center;
     text-align: center;
     padding-top: 2vh;
     font-size: 2vh;

@@ -1,13 +1,14 @@
 .logo-lion-scholl {
+    height: 1vh;
     padding-top: 1vh;
-    padding-left: 6vw;
+    padding-left: 8.5vw;
 }
 
 .container-sair {
     display: flex;
     justify-content: end;
     align-items: center;
-    padding-right: 11.5vw;
+    padding-right: 10vw;
 }
 
 .icon-sair {
@@ -20,4 +21,10 @@
     font-size: 3vh;
     color: #ffffff;
     cursor: pointer;
+}
+
+@media (max-width: 640px) {
+    .logo {
+        height: 8vh;
+    }
 }

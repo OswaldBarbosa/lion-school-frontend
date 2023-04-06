@@ -6,11 +6,12 @@ const apiCursos = await getCursos()
 
 const criarCardCursos = (cursos) => {
     const card = document.createElement('div')
-    card.classList.add('container-cursos')
+    card.classList.add('card-cursos')
 
     const iconCurso = document.createElement('img')
     iconCurso.classList.add('image-curso')
     iconCurso.src = `${cursos.icone}`
+    iconCurso.alt = 'Icone dos Curso'
 
     const siglaCurso = document.createElement('p')
     siglaCurso.classList.add('sigla-curso')
@@ -20,7 +21,7 @@ const criarCardCursos = (cursos) => {
 
     card.addEventListener('click', () => {
         localStorage.setItem('nomeCurso', cursos.nome)
-        localStorage.setItem('curso', cursos.sigla)
+        localStorage.setItem('siglaCurso', cursos.sigla)
         window.location.href = `../turma/index.html`
     })
 

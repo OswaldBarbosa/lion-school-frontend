@@ -1,9 +1,3 @@
-.devices {
-    display: flex;
-    justify-content: center;
-    grid-area: devices;
-}
-
 .text-escolha {
     padding-left: 8vw;
     font-size: 8vh;
@@ -24,19 +18,25 @@
     grid-area: devices;
 }
 
-.studant {
+.container-devices {
+    display: flex;
+    justify-content: center;
+    grid-area: devices;
+}
+
+.container-studant {
     display: grid;
     justify-content: center;
     grid-area: studant;
 }
 
-.container {
+.container-cursos {
     display: flex;
     justify-self: center;
     flex-direction: column;
 }
 
-.container-cursos {
+.card-cursos {
     display: flex;
     justify-content: center;
     width: 20vw;
@@ -44,20 +44,19 @@
     margin: 16px;
     background: var(--primary-color);
     box-shadow: 10px 10px #99A3D7;
-    transition: .5s;
+    transition: .7s;
     grid-template-columns: 
     50% 50%;
     cursor: pointer;
     grid-area: container-cursos;
 }
 
-.container-cursos:hover {
+.card-cursos:hover {
     width: 22vw;
     height: 24vh;
 }
 
 .image-curso {
-    width: 5vw;
     height: 8vh;
     display: flex;
     align-self: center;
@@ -70,4 +69,40 @@
     align-content: center;
     font-size: 8vh;
     color: #ffffff;
+}
+
+@media (max-width: 640px) {
+    .text-escolha {
+        width: 55vh;
+        padding-top: 5vh;
+        font-size: 6vh;
+    }
+
+    .text-gerenciar {
+        padding-left: 15vw;
+        font-size: 6vh;
+    }
+
+    .container-devices {
+        display: flex;
+        justify-content: center;
+    }
+
+    .devices {
+        height: 25vh;
+    }
+
+    .container-cursos {
+        display: flex;
+        flex-direction: column;
+        padding-top: 5vh;
+    }
+
+    .card-cursos {
+        width: 50vw;
+    }
+
+    .studant {
+        display: none;
+    }
 }

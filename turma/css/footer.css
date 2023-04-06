@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-left: 10vw;
+    padding-left: 8.5vw;
     gap: 2vh;
     grid-area: informacoes-contatos;
 }
@@ -34,6 +34,7 @@
 .container-redes-sociais {
     display: flex;
     justify-content: space-evenly;
+    padding-right: 7.5vw;
     align-items: center;
     grid-area: redes-sociais;
 }
