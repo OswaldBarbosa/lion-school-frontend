@@ -39,7 +39,7 @@ const carregarCursos = () => {
 const sair = () => {
     const botaoSair = document.getElementById('sair')
     botaoSair.onclick = () => {
-        window.close()
+        window.location.href = close()
     }
 }
 
