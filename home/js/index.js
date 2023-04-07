@@ -38,8 +38,8 @@ const carregarCursos = () => {
 
 const sair = () => {
     const botaoSair = document.getElementById('sair')
-    botaoSair.onclick = function () {
-        window.close
+    botaoSair.onclick = () => {
+        window.close()
     }
 }
 
