@@ -1,41 +1,71 @@
-.status {
-    padding-top: 1.5vh;
-    padding-left: 8.5vw;
-    font-size: 2vh;
+.dropdown {
+    position: relative;
+    display: inline-block;
 }
 
-.title-staus {
-    color: var(--primary-color);
+.dropdown-content {
+    display: none;
+    position: absolute;
+    z-index: 1;
 }
 
-.container-status {
-    width: 10vw;
-    height: 12vh;
+.dropdown-content-ano{
+    display: none;
+    position: absolute;
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    background-color: #1b245a;
+}
+
+.dropdown:hover .dropdown-content-ano {
+    display: block;
+    background-color: #1b245a;
+}
+
+.dropbtn {
+    background-color: rgb(74, 77, 247);
+    color: #fff;
+    padding: 12px;
+    font-size: 1rem;
+    border: none;
+    box-shadow: 0  10px 10px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-content a {
+    color: #fff;
+    padding: 12px 16px;
+    display: block;
+}
+
+.dropdown-content-ano a {
+    color: #fff;
+    padding: 12px 16px;
+    display: block;
+    width: 173.5px;
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    padding-left: 1vw;
-    background: var(--primary-color);
-    color: #ffffff;
+    align-items: center;
 }
 
-.finalizado {
-    width: 9vw;
-    border-top: 1px solid #ffffff;
-    border-bottom: 1px solid #ffffff;
+.dropdown-content a:hover {
+    background-color: #4a69ff;
 }
 
-.cursando {
-    width: 9vw;
-    border-bottom: 1px solid #ffffff;
-    transition: 10s;
+.dropdown-content-ano a:hover {
+    background-color: #4a69ff;
 }
 
-.cursando:hover {
-
+.container-legenda{
+    height: 5vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.legenda {
+.text-legenda {
     display: flex;
     justify-content: end;
     padding-top: 1.5vh;
@@ -45,14 +75,14 @@
     color: var(--primary-color);
 }
 
-.caixa-finalizado {
-    width: 1vw;
-    height: 2vh;
-    background: var(--second-color);
-}
-
 .caixa-cursando {
     width: 1vw;
     height: 2vh;
     background: var(--primary-color);
+}
+
+.caixa-finalizado {
+    width: 1vw;
+    height: 2vh;
+    background: var(--second-color);
 }
