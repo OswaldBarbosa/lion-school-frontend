@@ -21,7 +21,13 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    transition: .5s;
     background: var(--primary-color);
+}
+
+.card-alunos-cursando:hover {
+    transform: scale(1.1);
+    transition: .5s;
 }
 
 .card-alunos-finalizado {
@@ -30,7 +36,14 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    transition: .5s;
+
     background: #E5B657;
+}
+
+.card-alunos-finalizado:hover {
+    transform: scale(1.1);
+    transition: .5s;
 }
 
 .foto-aluno {

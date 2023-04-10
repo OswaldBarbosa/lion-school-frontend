@@ -22,7 +22,7 @@ nav {
     background: #BCC2E5;
     display: grid;
     grid-template-columns: 
-    50% 50%;
+    20vw 40vw 39vw;
 }
 
 main {

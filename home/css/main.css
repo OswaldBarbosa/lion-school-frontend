@@ -52,8 +52,8 @@
 }
 
 .card-cursos:hover {
-    width: 22vw;
-    height: 24vh;
+    transform: scale(1.1);
+    transition: .5s;
 }
 
 .image-curso {

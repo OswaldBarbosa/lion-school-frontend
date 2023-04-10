@@ -39,50 +39,61 @@
 
     <nav>
 
-        <div class="container-direito" id="container-direito">
-            <div class="container-legenda">
-                <p class="texto-ano">
-                    <div class="ano">
-                        <div class="dropdown">
-                            <button class="dropbtn">
-                                Ano de Conclusão
-                                <i class="fa-solid fa-angle-down"></i>
-                            </button>
-                            <div class="dropdown-content-ano" id="dropdown-content">
-                                <!-- <a href="#" id="2021" class="2021">2021</a>
-                                <a href="#" id="2022" class="2022">2022</a>
-                                <a href="#" id="2023" class="2023">2023</a> -->
-                            </div>
-                        </div>
-                    </div>
-                    </p>
-                <p class="texto-status">
-                <div class="status">
-                    <div class="dropdown">
-                        <button class="dropbtn">
-                            Status
-                            <i class="fa-solid fa-angle-down"></i>
-                        </button>
-                        <div class="dropdown-content" id="dropdown-content">
-                            <a href="#" id="status" class="card-status">Status</a>
-                            <a href="#" id="finalizado" class="card-finalizado">Finalizado</a>
-                            <a href="#" id="cursando" class="card-cursando">Cursando</a>
-                        </div>
-                    </div>
+        <div class="drop">
+
+            <div class="filtro-status">
+
+                <button class="button-status">Status</button>
+
+                <div class="status-content">
+
+                    <button class="button-status-dentro" id="status">
+                        <a href="#">Status</a>
+                    </button>
+
+                    <button class="button-status-dentro" id="finalizado">
+                        <a href="#">Finalizado</a>
+                    </button>
+
+                    <button class="button-status-dentro" id="cursando">
+                        <a href="#">Cursando</a>
+                    </button>
+
                 </div>
-                </p>
-                <div class="container-geral-status">
-                    <p class="texto-legenda">LEGENDA</p>
-                    <div class="container-status">
-                        <div class="quadrado-cursando"></div>
-                        <p class="status">Cursando</p>
-                    </div>
-                    <div class="container-status">
-                        <div class="quadrado-finalizado"></div>
-                        <p class="status">Finalizado</p>
-                    </div>
-                </div>
+
             </div>
+
+        </div>
+
+        <div class="filtro-ano">
+            
+            <p>Ano de Conclusão:</p>
+
+            <input type="number" id="input-ano">
+            
+        </div>
+
+        <div class="nav_li">
+
+            <ul class="legendas-status">
+
+                <li class="nav_item">
+                    Legenda
+                </li>
+
+                <li class="nav_item">
+                    <div class="cursando"></div>
+                    Cursando
+                </li>
+
+                <li class="nav_item">
+                    <div class="finalizado"></div>
+                    Finalizado
+                </li>
+
+            </ul>
+
+        </div>
 
     </nav>
 
@@ -93,7 +104,6 @@
             <!-- <h1 class="nome-curso">Desenvolvimento de sistemas</h1> -->
 
         </div>
-
 
         <div class="container-card-alunos" id="container-card-alunos">
 

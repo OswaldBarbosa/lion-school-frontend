@@ -1,88 +1,95 @@
-.dropdown {
-    position: relative;
-    display: inline-block;
+.filtro-status {
+  position: relative;
+  display: inline-block;
 }
 
-.dropdown-content {
-    display: none;
-    position: absolute;
-    z-index: 1;
+.button-status {
+  border-style: none;
+  background: #BCC2E5;
+  font-size: 2vh;
+  color: var(--primary-color);
+  cursor: pointer;
 }
 
-.dropdown-content-ano{
-    display: none;
-    position: absolute;
-    z-index: 1;
+.button-status-dentro {
+  border-style: none;
+  background: var(--primary-color);
+  font-size: 1.5vh;
+  color: #fff;
+  padding: 8px;
+  transition: .5s;
 }
 
-.dropdown:hover .dropdown-content {
-    display: block;
-    background-color: #1b245a;
+.button-status-dentro:hover {
+  font-size: 1.8vh;
 }
 
-.dropdown:hover .dropdown-content-ano {
-    display: block;
-    background-color: #1b245a;
+.filtro-ano {
+  display: flex;
+  justify-content: center;
+  padding-top: 1vh;
+  gap: 8px;
 }
 
-.dropbtn {
-    background-color: rgb(74, 77, 247);
-    color: #fff;
-    padding: 12px;
-    font-size: 1rem;
-    border: none;
-    box-shadow: 0  10px 10px rgba(0, 0, 0, 0.1);
+.filtro-ano p {
+  color: var(--primary-color)
 }
 
-.dropdown-content a {
-    color: #fff;
-    padding: 12px 16px;
-    display: block;
+.filtro-ano input {
+  width: 4vw;
+  height: 2.5vh;
+  border-color: #3347B0;
 }
 
-.dropdown-content-ano a {
-    color: #fff;
-    padding: 12px 16px;
-    display: block;
-    width: 173.5px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  gap: 12px;
 }
 
-.dropdown-content a:hover {
-    background-color: #4a69ff;
+.status-content {
+  display: none;
+  position: absolute;
+  background: var(--primary-color);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  padding: 1vh;
+  cursor: pointer;
 }
 
-.dropdown-content-ano a:hover {
-    background-color: #4a69ff;
+.filtro-status:hover .status-content {
+  display: block;
 }
 
-.container-legenda{
-    height: 5vh;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.legendas-status {
+  display: flex;
+  justify-content: end;
+  flex-direction: row;
+  padding-right: 10vw;
+  padding-top: 1vh;
+  gap: 16px;
+  color: var(--primary-color);
 }
 
-.text-legenda {
-    display: flex;
-    justify-content: end;
-    padding-top: 1.5vh;
-    padding-right: 10vw;
-    gap: 28px;
-    font-size: 2vh;
-    color: var(--primary-color);
+.nav_item {
+  display: flex;
+  gap: 8px;
 }
 
-.caixa-cursando {
-    width: 1vw;
-    height: 2vh;
-    background: var(--primary-color);
+.cursando {
+  width: 1vw;
+  height: 1vw;
+  background-color: var(--primary-color);
 }
 
-.caixa-finalizado {
-    width: 1vw;
-    height: 2vh;
-    background: var(--second-color);
+.finalizado {
+  width: 1vw;
+  height: 1vw;
+  background-color: #E5B657;
+}
+
+.drop {
+  display: flex;
+  padding-left: 8.5vw;
+  padding-top: 1vh;
 }
