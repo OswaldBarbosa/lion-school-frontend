@@ -1,41 +1,11 @@
 'use strict'
 
-import { getAlunos, getAlunosStatus } from "../js/main.js"
+import { getAlunos, getAlunosStatusECurso } from "../js/main.js"
 
-const curso = localStorage.getItem('siglaCurso')
+const alunos = await getAlunos()
+
 const nomeDoCurso = localStorage.getItem('nomeCurso')
 
-const listaAlunosCurso = await getAlunos(curso)
-const listaAlunosCursando = await getAlunosStatus('Cursando')
-const listaAlunosFinalizado = await getAlunosStatus('Finalizado')
-
-//Função que verifica se o aluno é do curso
-const verificacaoAluno = (array) => {
-    let listaAlunos = array
-    let arrayAlunos = []
-
-    listaAlunos.forEach((aluno) => {
-        let jsonAluno = {}
-        if (aluno.curso == nomeDoCurso) {
-            jsonAluno = {
-                nome: aluno.nome,
-                foto: aluno.foto,
-                matricula: aluno.matricula,
-                sexo: aluno.sexo,
-                status: aluno.status,
-                curso: aluno.curso
-            }
-            arrayAlunos.push(jsonAluno)
-        }
-    })
-    let informacoes = {
-        arrayAlunos
-    }
-    return informacoes
-}
-
-
-//Função que cria o nome do curso
 const criarNomeCurso = () => {
     const containerNomeCurso = document.querySelector('.container-nome-curso')
 
@@ -48,122 +18,72 @@ const criarNomeCurso = () => {
     return containerNomeCurso
 }
 
-//Função que cria os cards dos alunos
-const criarCards = (aluno) => {
-    const cardAluno = document.createElement('div')
+const criarCard = (aluno) => {
+    const card = document.createElement('div')
+    card.classList.add('card');
 
-    if (aluno.status == "Finalizado") {
-        cardAluno.classList.add('card-alunos-finalizado')
+    if (aluno.status == 'Cursando') {
+        card.classList.add('card-alunos-cursando')
     } else {
-        cardAluno.classList.add('card-alunos-cursando')
+        card.classList.add('card-alunos-finalizado')
     }
 
-    const imgAluno = document.createElement('img')
-    imgAluno.src = `${aluno.foto}`
-    imgAluno.classList.add('foto-aluno')
+    const foto = document.createElement('img')
+    foto.classList.add('foto-aluno')
+    foto.src = `${aluno.foto}`
 
-    const nomeAluno = document.createElement('div')
-    nomeAluno.classList.add('nome-aluno')
-    nomeAluno.textContent = aluno.nome.toUpperCase()
+    const nome = document.createElement('h2')
+    nome.classList.add('nome-aluno')
+    nome.textContent = aluno.nome.toUpperCase()
 
-    cardAluno.append(imgAluno, nomeAluno)
+    const matricula = document.createElement('span')
+    matricula.textContent = aluno.matricula
 
-    cardAluno.addEventListener('click', () => {
-        localStorage.setItem('matricula', aluno.matricula)
-        window.location.href = '../alunos/index.html'
+    card.append(foto, nome)
+
+    card.addEventListener('click', () => {
+        localStorage.setItem('matricula', matricula.textContent)
+        window.location.href = "../../alunos/index.html"
     })
 
-    return cardAluno
+    return card
+}
+
+const filtrandoPorStatus = () => {
+    const cardsStatus = document.querySelectorAll('.card-');
+    cardsStatus.forEach(button => {
+
+        const buttonClicado = button.id;
+        button.addEventListener('click', async () => {
+            if (button.id == "status") {
+                carregarCard()
+            } else {
+                const retorna = await getAlunosStatusECurso(buttonClicado)
+                const cardJSON = retorna.aluno.map(criarCard);
+                const card = document.getElementById('container-card-alunos')
+                card.replaceChildren(...cardJSON)
+            }
+
+        });
+
+    });
 
 }
 
 const carregarCard = () => {
-    const container = document.querySelector('.container-card-alunos')
-    const cards = listaAlunosCurso.alunos.map(criarCards)
+    const container = document.getElementById('container-card-alunos')
+    const cards = alunos.aluno.map(criarCard)
 
     container.replaceChildren(...cards)
-
-    const status = document.getElementById('status')
-    const cursando = document.getElementById('cursando')
-    const finalizado = document.getElementById('finalizado')
-
-        const inputAnoConclusao = document.getElementById('input-ano')
-    inputAnoConclusao.addEventListener('keydown', (enter) => {
-        if (enter.key == "Enter") {
-            const ano = inputAnoConclusao.value
-            const jsonAlunos = alunosAno(listaAlunosCurso.alunos, ano)
-            const alunos = jsonAlunos.listaAlunos.map(criarCards)
-            container.replaceChildren(...alunos)
-        }
-    })
-
-    status.onclick = () => {
-        filtrarAnoComStatus(listaAlunosCurso.alunos)
-    }
-
-    finalizado.onclick = () => {
-        filtrarAnoComStatus(listaAlunosFinalizado.alunos)
-    }
-
-    cursando.onclick = () => {
-        filtrarAnoComStatus(listaAlunosCursando.alunos)
-    }
-
-    criarNomeCurso()
-
 }
 
-const filtrarAnoComStatus = (listaArray) =>{
-    let lista = listaArray
-    const containerCards = document.querySelector('.container-card-alunos')
-    const inputYear = document.getElementById('input-ano')
-    let jsonAlunos = verificacaoAluno(lista)
-    let alunos = jsonAlunos.arrayAlunos.map(criarCards)
-    containerCards.replaceChildren(...alunos)
-    inputYear.addEventListener('keydown', (e) =>{
-        if(e.key == "Enter"){
-            const ano = inputYear.value
-            const arrayAlunos = alunosAno(lista, ano)
-            jsonAlunos = verificacaoAluno(arrayAlunos.listaAlunos)
-            alunos = jsonAlunos.arrayAlunos.map(criarCards)
-            containerCards.replaceChildren(...alunos)
-        }
-    })
+const carregarNomeCurso = () => {
+    const container = document.getElementById('container-nome-curso')
+    const nome = criarNomeCurso()
+
+    container.replaceChildren(nome)
 }
 
-const alunosAno = (array, anoConclusao) => {
-    let ano = anoConclusao
-    let lista = array
-    let jsonAluno = {}
-    let listaAlunos = []
-    let jsonLista = {}
-
-    lista.forEach((aluno) => {
-        if (aluno.anoConclusao == ano) {
-            jsonAluno = {
-                nome: aluno.nome,
-                foto: aluno.foto,
-                matricula: aluno.matricula,
-                sexo: aluno.sexo,
-                status: aluno.status,
-                curso: aluno.curso
-            }
-            listaAlunos.push(jsonAluno)
-        }
-    })
-    jsonLista = {
-        listaAlunos
-    }
-    return jsonLista
-}
-
-const voltar = () => {
-    const botaoVoltar = document.getElementById('voltar')
-    botaoVoltar.onclick = () => {
-        window.location.href = '../home/index.html'
-    }
-}
-
-voltar()
-
+filtrandoPorStatus()
 carregarCard()
+carregarNomeCurso()

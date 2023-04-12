@@ -15,12 +15,16 @@
     gap: 70px;
 }
 
-.card-alunos-cursando {
+.card {
     width: 15vw;
     height: 40vh;
     display: flex;
     flex-direction: column;
     align-items: center;
+    transition: .5s;
+}
+
+.card-alunos-cursando {
     transition: .5s;
     background: var(--primary-color);
 }
@@ -31,13 +35,7 @@
 }
 
 .card-alunos-finalizado {
-    width: 15vw;
-    height: 40vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     transition: .5s;
-
     background: #E5B657;
 }
 
@@ -58,4 +56,20 @@
     padding-top: 2vh;
     font-size: 2vh;
     color: #ffffff;
+}
+
+
+.container-buttons-status{
+    display: none;
+    position: absolute;
+    z-index: 1;
+}
+
+
+
+.container-buttons-status a:hover {
+    background-color: #4a69ff;
+}
+.container-buttons-status a:hover {
+    background-color: #4a69ff;
 }

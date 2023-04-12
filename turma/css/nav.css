@@ -1,95 +1,83 @@
-.filtro-status {
+.container-status {
   position: relative;
   display: inline-block;
 }
 
-.button-status {
-  border-style: none;
-  background: #BCC2E5;
-  font-size: 2vh;
-  color: var(--primary-color);
-  cursor: pointer;
+.container-status:hover .container-buttons-status {
+  display: block;
+  background-color: #1b245a;
 }
 
-.button-status-dentro {
-  border-style: none;
-  background: var(--primary-color);
-  font-size: 1.5vh;
-  color: #fff;
-  padding: 8px;
-  transition: .5s;
-}
-
-.button-status-dentro:hover {
-  font-size: 1.8vh;
-}
-
-.filtro-ano {
+.container-buttons-status a {
+  width: 5vw;
+  height: 5vh;
   display: flex;
   justify-content: center;
-  padding-top: 1vh;
-  gap: 8px;
+  align-items: center;
+  color: #fff;
 }
 
-.filtro-ano p {
-  color: var(--primary-color)
+.container-buttons-status a:hover {
+  background-color: var(--primary-color)
 }
 
-.filtro-ano input {
-  width: 4vw;
-  height: 2.5vh;
-  border-color: #3347B0;
-}
-
-a {
-  text-decoration: none;
-  color: white;
-  font-weight: bold;
-  gap: 12px;
-}
-
-.status-content {
-  display: none;
-  position: absolute;
+.button-status {
+  width: 5vw;
+  height: 5vh;
   background: var(--primary-color);
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  padding: 1vh;
-  cursor: pointer;
+  border: none;
+  font-size: 2vh;
+  color: #fff;
 }
 
-.filtro-status:hover .status-content {
+/* .container-ano {
+  position: relative;
+  display: inline-block;
+}
+
+.container-ano:hover .container-buttons-ano {
   display: block;
+  background-color: #1b245a;
 }
 
-.legendas-status {
+.container-buttons-ano a {
+  width: 5vw;
+  height: 5vh;
   display: flex;
-  justify-content: end;
-  flex-direction: row;
-  padding-right: 10vw;
-  padding-top: 1vh;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+.container-buttons-ano a:hover {
+  background-color: var(--primary-color)
+}
+
+.button-ano {
+  width: 12vw;
+  height: 5vh;
+  background: var(--primary-color);
+  border: none;
+  font-size: 2vh;
+  color: #fff;
+} */
+
+.container-legendas {
+  display: flex;
   gap: 16px;
+  font-size: 2vh;
+  font-weight: 500;
   color: var(--primary-color);
-}
-
-.nav_item {
-  display: flex;
-  gap: 8px;
 }
 
 .cursando {
   width: 1vw;
   height: 1vw;
-  background-color: var(--primary-color);
+  background: var(--primary-color);
 }
 
 .finalizado {
   width: 1vw;
   height: 1vw;
-  background-color: #E5B657;
-}
-
-.drop {
-  display: flex;
-  padding-left: 8.5vw;
-  padding-top: 1vh;
+  background: #E5B657;
 }
