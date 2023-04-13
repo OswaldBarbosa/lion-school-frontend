@@ -19,10 +19,10 @@ header {
 main {
     height: 75vh;
     display: grid;
+    justify-items: center;
+    align-items: center;
     grid-template-columns: 
     50% 50%;
-    grid-template-areas: 
-    "aluno grafico";
 }
 
 footer {

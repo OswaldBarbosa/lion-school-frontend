@@ -1,122 +1,117 @@
-.container-aluno-grafico {
-    width: 100%;
-    display: grid;
-    grid-template-areas: "container-aluno container-grafico";
-    grid-template-columns: 1fr 1fr;
-    place-items: center;
-
-}
-
-.container-aluno {
-    width: 500px;
-    height: 500px;
-    padding: 34px;
-    background: #FFFFFF;
-    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.25);
-    display: grid;
-    place-items: center;
-}
-
-.img-aluno {
-    width: 400px;
-}
-
-.name-aluno {
-    font-style: normal;
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 27px;
-    text-align: center;
-    text-transform: uppercase;
-    color: #3347B0;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-
-.container-grafico {
-    width: 500px;
-    height: 500px;
-    padding: 40px;
-    background: #FFFFFF;
-    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.25);
+.card-aluno {
+    width: 25vw;
+    height: 25vw;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 0 0 black, 0 0 1em black;
 }
 
-/* .container-aluno-grafico :hover{
-    transform: scale(1.1);
-} */
-.tooltip-text {
-    display: none;
-    width: auto;
-    height: 25px;
-    transform: translateX(-50%);
-    background-color: #333;
-    color: #fff;
-    padding: 5px;
-    border-radius: 3px;
-    font-size: 14px;
-    white-space: nowrap;
-}
-
-.numeros {
+.foto-aluno {
     display: flex;
-    justify-content: space-between;
+    align-items: center;
+    height: 35vh;
+}
+
+.nome-aluno {
+    padding-top: 5vh;
+    font-size: 2.5vh;
+    font-weight: 500;
+    color: var(--primary-color);
+}
+
+.card-notas {
+    grid-area: notas;
+    height: 50vh;
+    width: 40vw;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.box-notas {
+    height: 50vh;
+    width: 40vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+.nota-aluno {
+    display: grid;
+    grid-template-areas:
+        "nota"
+        "box"
+        "materia";
+    grid-template-rows:
+        .2fr 1fr .1fr;
+    place-items: center;
+}
+
+.porcentagem-nota-aprovado{
+    grid-area: nota;
+    font-style: normal;
     font-weight: 700;
-    font-size: 18px;
+    line-height: 27px;
+    font-family: 'Poppins', sans-serif;
     color: #3347B0;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-.preenchimento {
-    display: flex;
-    height: 300px;
-    align-items: flex-end;
+.porcentagem-nota-reprovado{
+    grid-area: nota;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 27px;
+    font-family: 'Poppins', sans-serif;
+    color: #c11010;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.porcentagem-nota-exame{
+    grid-area: nota;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 27px;
+    font-family: 'Poppins', sans-serif;
+    color: #E5B657;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.tamanho-nota {
+    grid-area: box;
+    height: 30vh;
+    width: 1vw;
     background-color: #EEEFF8;
-    border-radius: 4px 4px 0px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
 }
 
-.chart {
-    display: flex;
-    justify-content: space-between;
-}
-
-.bar {
-    display: flex;
-    justify-content: space-between;
-    width: 16px;
-    background-color: #3347B0;
-    text-align: center;
+.nota-aprovado {
+    background: #3347B0;
     box-shadow: 0px 0px 24px #3347B0;
     border-radius: 4px 4px 0px 0px;
 }
 
-.barra-vermelho {
-    background-color: #C11010;
+.nota-reprovado {
+    background: #C11010;
     box-shadow: 0px 0px 24px #C11010;
+    border-radius: 4px 4px 0px 0px;
 }
 
-.barra-amarelo {
-    background-color: #E5B657;
+.nota-exame {
+    background: #E5B657;
     box-shadow: 0px 0px 24px #E5B657;
+    border-radius: 4px 4px 0px 0px;
 }
 
-.nomes {
-    display: flex;
-    justify-content: space-between;
+.subject {
+    font-family: 'Poppins';
+    font-style: normal;
     font-weight: 700;
     font-size: 18px;
     line-height: 27px;
-    text-transform: uppercase;
     color: #3347B0;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-
-.numeroNome-Vermelho {
-    color: #C11010;
-}
-
-.numeroNome-Amarelo {
-    color: #E5B657;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);   
 }

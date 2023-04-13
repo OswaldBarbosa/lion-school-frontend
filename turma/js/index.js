@@ -43,7 +43,8 @@ const criarCard = (aluno) => {
 
     card.addEventListener('click', () => {
         localStorage.setItem('matricula', matricula.textContent)
-        window.location.href = "../../alunos/index.html"
+        localStorage.setItem('nome', nome.textContent)
+        window.location.href = "../alunos/index.html"
     })
 
     return card
@@ -70,6 +71,13 @@ const filtrandoPorStatus = () => {
 
 }
 
+const voltar = () => {
+    const buttonVoltar = document.getElementById('voltar')
+    buttonVoltar.onclick = () => {
+        window.location.href = '../home/index.html'
+    }
+}
+
 const carregarCard = () => {
     const container = document.getElementById('container-card-alunos')
     const cards = alunos.aluno.map(criarCard)
@@ -77,13 +85,10 @@ const carregarCard = () => {
     container.replaceChildren(...cards)
 }
 
-const carregarNomeCurso = () => {
-    const container = document.getElementById('container-nome-curso')
-    const nome = criarNomeCurso()
+criarNomeCurso()
 
-    container.replaceChildren(nome)
-}
+carregarCard()
 
 filtrandoPorStatus()
-carregarCard()
-carregarNomeCurso()
+
+voltar()

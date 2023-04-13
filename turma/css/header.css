@@ -10,6 +10,17 @@
     padding-right: 10vw;
 }
 
+.efeito {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    transition: .5s;
+}
+
+.efeito:hover {
+    transform: scale(1.2);
+}
+
 .icon-voltar {
     font-size: 4vh;
     color: #ffffff;

@@ -2,123 +2,100 @@
 
 import { getMatriculaAluno } from "../js/main.js"
 
-const matriculaAluno = await getMatriculaAluno()
+const matricula = localStorage.getItem('matricula')
+const matriculaAluno = await getMatriculaAluno(matricula)
 
-const criarCardAluno = (matricula) => {
-    const cardAluno = document.createElement('div')
-    cardAluno.classList.add('container-aluno')
-    cardAluno.title
+const criarCard = () => {
+    if (matriculaAluno.matricula == matricula) {
+        const cardAluno = document.createElement('div')
+        cardAluno.classList.add('card-aluno')
 
-    const imgAluno = document.createElement('img')
-    imgAluno.classList.add('img-aluno')
-    imgAluno.src = matricula.foto
+        const fotoAluno = document.createElement('img')
+        fotoAluno.classList.add('foto-aluno')
+        fotoAluno.src = matriculaAluno.foto
 
-    const nomeAluno = document.createElement('p')
-    nomeAluno.classList.add('name-aluno')
-    nomeAluno.textContent = matricula.aluno.nome
+        const nomeAluno = document.createElement('p')
+        nomeAluno.classList.add('nome-aluno')
+        nomeAluno.textContent = matriculaAluno.nome
 
-    cardAluno.append(imgAluno, nomeAluno)
+        cardAluno.append(fotoAluno, nomeAluno)
 
-    return cardAluno
+        return cardAluno
+    }
 }
 
-const criarCardGrafico = () => {
-    const cardGrafico = document.createElement('div')
-    cardGrafico.classList.add('container-grafico')
+const criarGrafico = () => {
+    if (matriculaAluno.matricula == matricula) {
+        const cardNotas = document.createElement('div')
+        cardNotas.classList.add('card-notas')
 
-    const numeros = document.createElement('div')
-    numeros.classList.add('numeros')
+        const boxNotas = document.createElement('div')
+        boxNotas.classList.add('box-notas')
 
-    const chart = document.createElement('div')
-    chart.classList.add('chart')
+        matriculaAluno.disciplinas.forEach(function (disciplinas) {
+            const notaAluno = document.createElement('div')
+            notaAluno.classList.add('nota-aluno')
 
-    const nomesDisciplinas = document.createElement('div')
-    nomesDisciplinas.classList.add('nomes')
+            const textNota = document.createElement('p')
+            textNota.textContent = disciplinas.media
 
-    matriculaAluno.aluno.curso[0].disciplinas.forEach(disciplina => {
+            const tamanhoNota = document.createElement('div')
+            tamanhoNota.classList.add("tamanho-nota")
 
-        // numeros do grafico
-        const numerosGrafico = document.createElement('span')
-        numerosGrafico.classList.add()
-        numerosGrafico.textContent = disciplina.media
+            const barraNota = document.createElement('div')
+            const valor = parseInt(textNota.textContent)
 
-        numeros.append(numerosGrafico)
+            if (parseInt(textNota.textContent) >= 70 && parseInt(textNota.textContent) <= 100) {
+                textNota.classList.add('porcentagem-nota-aprovado')
+                barraNota.classList.add('nota-aprovado')
+            } else if (parseInt(textNota.textContent) >= 0 && parseInt(textNota.textContent) <= 60) {
+                textNota.classList.add('porcentagem-nota-reprovado')
+                barraNota.classList.add('nota-reprovado')
+            } else if (parseInt(textNota.textContent) >= 61 && parseInt(textNota.textContent) <= 69) {
+                textNota.classList.add('porcentagem-nota-exame')
+                barraNota.classList.add('nota-exame')
+            }
 
-        //valores do grafico
-        const preenchimento = document.createElement('div')
-        preenchimento.classList.add('preenchimento')
+            const altura = `${(valor / 50) * 50}%`
+            barraNota.style.height = altura
 
-        const valor = document.createElement('div')
-        valor.classList.add('bar')
-        valor.setAttribute('title', disciplina.nome);
+            const materia = document.createElement('h1')
+            materia.classList.add('subject')
+            materia.textContent = disciplinas.sigla
 
-        // const tooltipText = document.createElement('title');
-        // tooltipText.classList.add('tooltip-text');
-        // tooltipText.textContent = disciplina.sigla;
-        // tooltipText.setAttribute('title', disciplina.sigla);
+            tamanhoNota.append(barraNota)
+            notaAluno.append(textNota, tamanhoNota, materia)
+            boxNotas.append(notaAluno)
+        });
 
-        // valor.append(tooltipText);
+        cardNotas.append(boxNotas)
+        return cardNotas
+    }
+}
 
-        // valor.addEventListener('mouseover', function() {
-        //     tooltipText.style.display = 'inline-block';
-        //   });
-          
-        //   valor.addEventListener('mouseout', function() {
-        //     tooltipText.style.display = 'none';
-        //   });
-
-        setTimeout(() => {
-            valor.style.height = disciplina.media + '%'
-        }, 100);
-
-        if (disciplina.media < 50) {
-            valor.classList.add('barra-vermelho')
-        } else if (disciplina.media >= 50 && disciplina.media <= 70) {
-            valor.classList.add('barra-amarelo')
-        }
-
-        chart.append(preenchimento)
-        preenchimento.append(valor)
-
-        //sigla de todas as materias
-        const nomesGrafico = document.createElement('span')
-        nomesGrafico.classList.add()
-        nomesGrafico.textContent = disciplina.sigla
-
-        nomesDisciplinas.append(nomesGrafico)
-
-        if (disciplina.media < 50) {
-            numerosGrafico.classList.add('numeroNome-Vermelho')
-            nomesGrafico.classList.add('numeroNome-Vermelho')
-        } else if (disciplina.media >= 50 && disciplina.media <= 70) {
-            numerosGrafico.classList.add('numeroNome-Amarelo')
-            nomesGrafico.classList.add('numeroNome-Amarelo')
-        }
-
-    })
-
-    cardGrafico.append(numeros)
-    cardGrafico.append(chart)
-    cardGrafico.append(nomesDisciplinas)
-
-    return cardGrafico
+const voltar = () => {
+    const buttonVoltar = document.getElementById('voltar')
+    buttonVoltar.onclick = () => {
+        window.location.href = '../turma/index.html'
+    } 
 }
 
 const carregarCard = () => {
-    const cardsAlunos = document.getElementById('container-aluno-grafico')
-    const containerAluno = criarCardAluno(matriculaAluno)
-    const containerGrafico = criarCardGrafico(matriculaAluno)
-    cardsAlunos.append(containerAluno, containerGrafico)
+    const container = document.getElementById('container-aluno')
+    const card = criarCard()
+
+    container.append(card)
+}
+
+const carregarGrafico = () => {
+    const container = document.getElementById('container-grafico')
+    const grafico = criarGrafico()
+
+    container.append(grafico)
 }
 
 carregarCard()
 
-
-const voltar = () => {
-    const botaoVoltar = document.getElementById('voltar')
-    botaoVoltar.onclick = () => {
-        window.location.href = '../turma/index.html'
-    }
-}
+carregarGrafico()
 
 voltar()

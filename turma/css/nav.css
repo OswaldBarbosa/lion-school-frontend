@@ -9,7 +9,7 @@
 }
 
 .container-buttons-status a {
-  width: 5vw;
+  width: 7vw;
   height: 5vh;
   display: flex;
   justify-content: center;
@@ -22,45 +22,14 @@
 }
 
 .button-status {
-  width: 5vw;
-  height: 5vh;
+  width: 7vw;
+  padding: 1vh;
+  height: 6vh;
   background: var(--primary-color);
   border: none;
   font-size: 2vh;
   color: #fff;
 }
-
-/* .container-ano {
-  position: relative;
-  display: inline-block;
-}
-
-.container-ano:hover .container-buttons-ano {
-  display: block;
-  background-color: #1b245a;
-}
-
-.container-buttons-ano a {
-  width: 5vw;
-  height: 5vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #fff;
-}
-
-.container-buttons-ano a:hover {
-  background-color: var(--primary-color)
-}
-
-.button-ano {
-  width: 12vw;
-  height: 5vh;
-  background: var(--primary-color);
-  border: none;
-  font-size: 2vh;
-  color: #fff;
-} */
 
 .container-legendas {
   display: flex;
