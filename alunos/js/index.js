@@ -13,6 +13,7 @@ const criarCard = () => {
         const fotoAluno = document.createElement('img')
         fotoAluno.classList.add('foto-aluno')
         fotoAluno.src = matriculaAluno.foto
+        fotoAluno.alt = 'Foto do Aluno'
 
         const nomeAluno = document.createElement('p')
         nomeAluno.classList.add('nome-aluno')
@@ -59,8 +60,8 @@ const criarGrafico = () => {
             const altura = `${(valor / 50) * 50}%`
             barraNota.style.height = altura
 
-            const materia = document.createElement('h1')
-            materia.classList.add('subject')
+            const materia = document.createElement('p')
+            materia.classList.add('sigla-disciplina')
             materia.textContent = disciplinas.sigla
 
             tamanhoNota.append(barraNota)

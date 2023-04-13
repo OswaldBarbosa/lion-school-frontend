@@ -32,7 +32,7 @@ const criarCardCursos = (curso) => {
 const sair = () => {
     const botaoSair = document.getElementById('sair')
     botaoSair.onclick = () => {
-        window.location.href = close()
+        window.close()
     }
 }
 

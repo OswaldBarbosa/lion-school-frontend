@@ -34,3 +34,17 @@ footer {
     "informacoes-contatos copyrigyh redes-sociais";
     grid-template-columns: 30vw 40vw 20vw;
 }
+
+@media (max-width: 640px) {
+    main {
+        height: 100vh;
+        display: grid;
+        grid-template-columns: none;
+    }
+
+    footer {
+        height: 35vh;
+        display: flex;
+        flex-direction: column;
+    }
+}

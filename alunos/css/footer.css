@@ -1,4 +1,4 @@
-.informacoes-container {
+.container-informacoes {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -54,4 +54,34 @@
 
 .icons-redes-sociais:hover {
     color: #E5B657;
+}
+
+@media (max-width: 640px) {
+    .container-informacoes {
+        height: 15vh;
+        display: flex;
+        align-items: center;
+        margin-top: 2vh;
+        padding-left: 0;
+    }
+
+    .copyrigth {
+        height: 5vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 2vh;
+        margin-bottom: 2vh;
+    }
+
+    .container-redes-sociais {
+        height: 10vh;
+        display: flex;
+        justify-content: space-evenly;
+        padding: 0;
+    }
+
+    .icons-redes-sociais {
+        width: 10vw;
+    }
 }

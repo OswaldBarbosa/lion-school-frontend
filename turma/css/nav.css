@@ -1,3 +1,8 @@
+.container-filtragem {
+  display: flex;
+  gap: 24vw
+}
+
 .container-status {
   position: relative;
   display: inline-block;
@@ -9,7 +14,7 @@
 }
 
 .container-buttons-status a {
-  width: 7vw;
+  width: 6vw;
   height: 5vh;
   display: flex;
   justify-content: center;
@@ -22,7 +27,7 @@
 }
 
 .button-status {
-  width: 7vw;
+  width: 6vw;
   padding: 1vh;
   height: 6vh;
   background: var(--primary-color);
@@ -31,12 +36,81 @@
   color: #fff;
 }
 
+.container-buttons-status{
+  display: none;
+  position: absolute;
+  z-index: 1;
+}
+
+.container-buttons-status a:hover {
+  background-color: #4a69ff;
+}
+
+/**********************************/
+
+.container-ano {
+  position: relative;
+  display: inline-block;
+}
+
+.container-ano:hover .container-buttons-ano {
+  display: block;
+  background-color: #1b245a;
+}
+
+.container-buttons-ano a {
+  width: 12vw;
+  height: 5vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+.container-buttons-ano a:hover {
+  background-color: var(--primary-color)
+}
+
+.button-ano {
+  width: 12vw;
+  padding: 1vh;
+  height: 6vh;
+  background: var(--primary-color);
+  border: none;
+  font-size: 2vh;
+  color: #fff;
+}
+
+.container-buttons-ano{
+  display: none;
+  position: absolute;
+  z-index: 1;
+}
+
+.container-buttons-ano a:hover {
+  background-color: #4a69ff;
+}
+
+/******************************/
+
 .container-legendas {
   display: flex;
   gap: 16px;
   font-size: 2vh;
   font-weight: 500;
   color: var(--primary-color);
+}
+
+.box-cursando {
+  width: 1vw;
+  height: 1vw;
+  background: var(--primary-color);
+}
+
+.box-finalizado {
+  width: 1vw;
+  height: 1vw;
+  background: #E5B657;
 }
 
 .cursando {
@@ -49,4 +123,42 @@
   width: 1vw;
   height: 1vw;
   background: #E5B657;
+}
+
+@media (max-width: 640px) {
+  .container-filtragem {
+    grid-area: filtragem;
+  }
+
+  .button-status {
+    width: 20vw;
+  }
+
+  .button-ano {
+    width: 25vw;
+  }
+
+  .container-buttons-status {
+    padding-left: 7vw;
+    width: 20vw;
+  }
+
+  .container-buttons-ano {
+    padding-left: 7vw;
+    width: 25vw;
+  }
+
+  .container-legendas {
+    grid-area: legendas;
+  }
+
+  .box-cursando {
+    width: 5vw;
+    height: 5vw;
+  }
+
+  .box-finalizado {
+    width: 5vw;
+    height: 5vw;
+  }
 }

@@ -32,3 +32,9 @@
     color: #ffffff;
     cursor: pointer;
 }
+
+@media(max-width: 640px) {
+    .logo {
+        height: 8vh;
+    }
+}
