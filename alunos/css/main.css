@@ -24,11 +24,12 @@
 .card-notas {
     grid-area: notas;
     height: 50vh;
-    width: 40vw;
+    width: 48vw;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
 
 .box-notas {
+    padding-left: 8vw;
     height: 50vh;
     width: 40vw;
     display: flex;
@@ -134,23 +135,23 @@
 
     .box-notas {
         padding-left: 22vh;
-        padding-bottom: 5vh;
-        gap: 16px;
+        padding-bottom: 1vh;
+        gap: 10px;
     }
 
     .porcentagem-nota-aprovado {
-        font-size: 2.5vh;
+        font-size: 2vh;
     }
 
     .porcentagem-nota-reprovado {
-        font-size: 2.5vh;
+        font-size: 2vh;
     }
 
     .porcentagem-nota-exame {
-        font-size: 2.5vh;
+        font-size: 2vh;
     }
 
     .sigla-disciplina {
-        font-size: 2.5vh;
+        font-size: 2vh;
     }
 }
