@@ -5,8 +5,7 @@
     grid-area: devices;
 }
 
-.text-curso {
-    font-weight: 500;
+b {
     color: var(--primary-color);
 }
 
