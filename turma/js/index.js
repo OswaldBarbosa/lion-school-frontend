@@ -75,7 +75,7 @@ const filtrandoPorStatus = () => {
 const voltar = () => {
     const buttonVoltar = document.getElementById('voltar')
     buttonVoltar.onclick = () => {
-        window.location.href = '../home/index.html'
+        window.location.href = '../index.html'
     }
 }
 

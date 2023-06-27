@@ -22,7 +22,7 @@ const criarCardCursos = (curso) => {
     card.addEventListener('click', () => {
         localStorage.setItem('nomeCurso', curso.nome)
         localStorage.setItem('siglaCurso', curso.sigla)
-        window.location.href = `../turma/index.html`
+        window.location.href = `../turma/turma.html`
     })
 
     return card

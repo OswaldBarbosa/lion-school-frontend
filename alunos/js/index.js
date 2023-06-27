@@ -77,7 +77,7 @@ const criarGrafico = () => {
 const voltar = () => {
     const buttonVoltar = document.getElementById('voltar')
     buttonVoltar.onclick = () => {
-        window.location.href = '../turma/index.html'
+        window.location.href = '../turma/turma.html'
     } 
 }
 
